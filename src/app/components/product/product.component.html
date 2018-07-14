@@ -1,0 +1,21 @@
+<div class="card-body">
+  <div class="row">
+    <div class="col-md-4">
+      <img width="160" [src]="product.imgURL" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <div class="d-flex justify-content-between align-items-center">
+        <h3>{{ product.sku }}</h3>
+        <span class="h1">{{ product.price }}</span>
+      </div>
+      <p class="card-text">{{ product.name }}</p>
+      <!-- BREADCRUMB -->
+      <ol class="breadcrumb">
+        <li *ngFor="let name of product.category; let i = index;" class="breadcrumb-item">
+          <a href="#">{{name}}</a>
+          <!-- <span>{{i < product.category.length - 1 ? '>' : ''}}</span> -->
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
